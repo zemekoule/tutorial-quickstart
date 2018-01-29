@@ -1,5 +1,13 @@
 parameters:
 
+extensions:
+    migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+    console: Contributte\Console\DI\ConsoleExtension
+
+migrations:
+    dir: %appDir%/../migrations # migrations base directory
+    driver: mysql               # pgsql or mysql
+    dbal: nette               # nextras, nette, doctrine or dibi
 
 application:
 	errorPresenter: Error
